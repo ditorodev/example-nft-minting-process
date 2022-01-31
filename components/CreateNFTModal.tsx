@@ -1,4 +1,4 @@
-import * as React from "React"
+import * as React from "react"
 import * as Dialog from '@radix-ui/react-dialog';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -6,7 +6,6 @@ import { ErrorMessage } from '@hookform/error-message';
 
 import { AppButton } from './AppButton';
 import { nftCollectionSchema } from '../types/Collection';
-import { CollectionsContext } from "../pages";
 import { useCollection } from "../hooks/useCollection";
 
 export const NFTFactoryModalTrigger = Dialog.Trigger;
