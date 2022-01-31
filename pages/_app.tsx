@@ -7,6 +7,7 @@ import { WalletConnectConnector } from 'wagmi/connectors/walletConnect'
 import { WalletLinkConnector } from 'wagmi/connectors/walletLink'
 
 import '../styles/globals.css'
+import { CollectionsProvider } from '../hooks/useCollection'
 
 const infuraId = process.env.NEXT_PUBLIC_INFURA_ID as string
 
@@ -61,7 +62,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     connectors={connectors}
     provider={provider}
     webSocketProvider={webSocketProvider}>
-    <Component {...pageProps} />
+    <CollectionsProvider>
+      <Component {...pageProps} />
+    </CollectionsProvider>
   </Provider>
 }
 
